@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reconciliation and Indigenous Populations of Canada</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      user-select: none;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .full-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.2;
+    }
+
+    .section-title {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.8s ease;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section:not(.part) .section-title {
+      font-size: 3em;
+      top: 50%;
+    }
+
+    .section.part .section-title {
+      font-size: 2em;
+      top: 10%;
+    }
+
+    .section-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 80%;
+      text-align: center;
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #ddd;
+      opacity: 0;
+    }
+
+    .animate-up {
+      animation: slideUp 1s ease forwards;
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .animate-to-part {
+      animation: toPart 1s ease forwards;
+    }
+
+    @keyframes toPart {
+      0% {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        font-size: 3em;
+        opacity: 1;
+      }
+      100% {
+        top: 10%;
+        transform: translate(-50%, -50%) scale(0.66);
+        font-size: 2em;
+        opacity: 1;
+      }
+    }
+
+    .slider-container {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .slider-left,
+    .slider-right {
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+      width: 40px;
+      height: 40px;
+    }
+
+    .slider-left:hover,
+    .slider-right:hover {
+      background-color: #333;
+      cursor: pointer;
+    }
+
+    .slider-left:active,
+    .slider-right:active {
+      background-color: #222;
+    }
+
+    .arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .arrow-left {
+      border-width: 8px 10px 8px 0;
+      border-color: transparent #ddd transparent transparent;
+    }
+
+    .arrow-right {
+      border-width: 8px 0 8px 10px;
+      border-color: transparent transparent transparent #ddd;
+    }
+
+    .slider-left:hover .arrow-left {
+      border-right-color: #fff;
+    }
+
+    .slider-right:hover .arrow-right {
+      border-left-color: #fff;
+    }
+
+    .slider-bar-border {
+      position: relative;
+      width: 300px;
+      height: 8px;
+      background-color: #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .slider-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: #007bff;
+      transition: width 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="section" id="section-start" style="display: block;">
+    <span class="section-title animate-up">Reconciliation and Indigenous Populations of Canada</span>
+  </div>
+
+  <div class="section part" id="section-part">
+    <span class="section-title animate-to-part"></span>
+    <span class="section-text animate-up"></span>
+  </div>
+
+  <div class="slider-container">
+    <button class="slider-left" onclick="leftClick()">
+      <div class="arrow arrow-left"></div>
+    </button>
+    <div class="slider-bar-border">
+      <div class="slider-progress" id="slider-bar"></div>
+    </div>
+    <button class="slider-right" onclick="rightClick()">
+      <div class="arrow arrow-right"></div>
+    </button>
+  </div>
+
+  <img src="" class="full-img" id="background-img" style="display: none;">
+
+  <script src="script.js"></script>
+</body>
+</html>
