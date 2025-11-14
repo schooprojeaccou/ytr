@@ -20,35 +20,43 @@
     }
 
     .section {
-      position: relative;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
       width: 90vw;
-      aspect-ratio: 5 / 3;
+      aspect-ratio: 16 / 9;
+
       max-height: 90vh;
       background-color: transparent;
       display: none;
       overflow: visible;
+
+      /* scaling reference variable */
+      --scale: 1;
     }
 
     .full-img {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       opacity: 0.2;
-      z-index: 0;
+      z-index: -2;
     }
 
     .corner-img,
     .center-img {
       position: absolute;
-      width: 10vw;
+      width: 20%;
       height: auto;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       opacity: 0.2;
-      z-index: 2;
+      z-index: -1;
       display: none;
       border-radius: 6px;
     }
@@ -69,23 +77,20 @@
       text-align: center;
       color: #fff;
       font-weight: bold;
-      transition: all 0.8s ease;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      max-width: 85%;
+      width: 90vw;
       white-space: normal;
-      word-wrap: break-word;
       line-height: 1.2;
     }
 
-    .section:not(.part) .section-title {
-      font-size: clamp(1.5em, 3vw, 3em);
-    }
+    .section:not(.part) .section-title { font-size: calc(4vw * var(--scale)); }
 
     .section.part .section-title {
-      font-size: clamp(1.2em, 2vw, 2em);
+      font-size: calc(2.5vw * var(--scale));
       top: 10%;
+      transform: translateX(-50%);
     }
 
     .section-text {
@@ -95,7 +100,7 @@
       transform: translate(-50%, -50%);
       max-width: 80%;
       text-align: center;
-      font-size: 1.3em;
+      font-size: calc(1.8vw * var(--scale));
       line-height: 1.6;
       color: #ddd;
       opacity: 0;
@@ -106,14 +111,8 @@
     }
 
     @keyframes slideUp {
-      0% {
-        opacity: 0;
-        transform: translate(-50%, 50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
+      0% { opacity: 0; transform: translate(-50%, 50px); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
     }
 
     .animate-to-part {
@@ -122,23 +121,32 @@
 
     @keyframes toPart {
       0% {
-      font-size: clamp(1.5em, 3vw, 3em);
-            position: absolute;
-      text-align: center;
-      color: #fff;
-      font-weight: bold;
-      transition: all 0.8s ease;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 85%;
-      white-space: normal;
-      word-wrap: break-word;
-      line-height: 1.2;
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        white-space: normal;
+        line-height: 1.2;
+        font-size: calc(4vw * var(--scale));
       }
       100% {
-      font-size: clamp(1.2em, 2vw, 2em);
-      top: 10%;
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        white-space: normal;
+        line-height: 1.2;
+        font-size: calc(2.5vw * var(--scale));
+        top: 10%;
+        transform: translateX(-50%);
       }
     }
 
@@ -151,6 +159,8 @@
       align-items: center;
       gap: 10px;
       z-index: 1000;
+      width: 50vw;
+      max-width: 600px;
     }
 
     .slider-left,
@@ -166,17 +176,12 @@
       transition: background-color 0.2s ease;
       width: 40px;
       height: 40px;
+      flex-shrink: 0;
     }
 
     .slider-left:hover,
     .slider-right:hover {
       background-color: #333;
-      cursor: pointer;
-    }
-
-    .slider-left:active,
-    .slider-right:active {
-      background-color: #222;
     }
 
     .arrow {
@@ -185,31 +190,21 @@
       border-style: solid;
     }
 
-    .arrow-left {
-      border-width: 8px 10px 8px 0;
-      border-color: transparent #ddd transparent transparent;
-    }
+    .arrow-left { border-width: 8px 10px 8px 0; border-color: transparent #ddd transparent transparent; }
+    .arrow-right { border-width: 8px 0 8px 10px; border-color: transparent transparent transparent #ddd; }
 
-    .arrow-right {
-      border-width: 8px 0 8px 10px;
-      border-color: transparent transparent transparent #ddd;
-    }
+    .arrow-left:hover { border-right-color: #fff; }
+    .arrow-right:hover { border-left-color: #fff; }
 
-    .slider-left:hover .arrow-left {
-      border-right-color: #fff;
-    }
-
-    .slider-right:hover .arrow-right {
-      border-left-color: #fff;
-    }
-
+    /* PATCH 3 — scale slider to screen */
     .slider-bar-border {
       position: relative;
-      width: 300px;
+      width: min(40vw, 500px);
       height: 8px;
       background-color: #444;
       border-radius: 4px;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .slider-progress {
@@ -224,6 +219,7 @@
   </style>
 </head>
 <body>
+
   <div class="section" id="section-start" style="display: block;">
     <span class="section-title animate-up">Reconciliation and Indigenous Populations of Canada</span>
   </div>
@@ -246,11 +242,13 @@
   </div>
 
   <img src="" class="full-img" id="background-img" style="display: none;">
-  <img src="" class="corner-img topleft" id="topleft-img" style="display: none;">
-  <img src="" class="corner-img topright" id="topright-img" style="display: none;">
-  <img src="" class="corner-img bottomleft" id="bottomleft-img" style="display: none;">
-  <img src="" class="corner-img bottomright" id="bottomright-img" style="display: none;">
-  <img src="" class="center-img centered" id="center-img" style="display: none;">
+  <div class="section" id="img-container" style="display: block;">
+    <img src="" class="corner-img topleft" id="topleft-img" style="display: none;">
+    <img src="" class="corner-img topright" id="topright-img" style="display: none;">
+    <img src="" class="corner-img bottomleft" id="bottomleft-img" style="display: none;">
+    <img src="" class="corner-img bottomright" id="bottomright-img" style="display: none;">
+    <img src="" class="center-img centered" id="center-img" style="display: none;">
+  </div>
 
   <script src="script.js"></script>
 </body>
