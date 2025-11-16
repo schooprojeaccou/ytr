@@ -484,7 +484,7 @@ function loadPart(sectionName, partArr) {
   const text = getTextOf(sectionPart);
 
   title.textContent = sectionName;
-  text.textContent = partArr[0];
+  text.innerHTML = partArr[0].replace("\n", "<br>");
 
   applyImages(partArr);
 
