@@ -334,7 +334,7 @@ const presentationData = [
     ],
     "parts": [
       [
-        "HTML & CSS designing of the site - Hossein with slight use of AI\nJavaScript functionality of the site - Hossein\nSource Searching - Alborz with slight emotional support from Hossein\nRetrieving Informations - Hossein & Alborz\nRetrieving Images - Hossein & Alborz\nWriting - Hossein & Alborz\nImproving and reformatting writing - Hossein\nMeowing - Mr. Kitty Whiskers",
+        "HTML & CSS designing of the site - Hossein with slight use of AI<br>JavaScript functionality of the site - Hossein<br>Source Searching - Alborz with slight emotional support from Hossein<br>Retrieving Informations - Hossein & Alborz<br>Retrieving Images - Hossein & Alborz<br>Writing - Hossein & Alborz<br>Improving and reformatting writing - Hossein<br>Meowing - Mr. Kitty Whiskers",
         "",
         "",
         "",
@@ -356,7 +356,7 @@ const presentationData = [
     ],
     "parts": [
       [
-        "Government of Canada. (2024-06-13). Indigenous peoples and communities\nRetrieved from https://www.rcaanc-cirnac.gc.ca/eng/1100100013785/1529102490303\nGovernment of Canada. (2017-05-02). First Nations in Canada\nRetrieved from https://www.rcaanc-cirnac.gc.ca/eng/1307460755710/1536862806124\nGovernment of Canada. (2025-05-29). Indigenous history in Canada\nRetrieved from https://www.rcaanc-cirnac.gc.ca/eng/1100100013778/1607903934135",
+        "Government of Canada. (2024-06-13). Indigenous peoples and communities<br>Retrieved from https://www.rcaanc-cirnac.gc.ca/eng/1100100013785/1529102490303<br>Government of Canada. (2017-05-02). First Nations in Canada<br>Retrieved from https://www.rcaanc-cirnac.gc.ca/eng/1307460755710/1536862806124<br>Government of Canada. (2025-05-29). Indigenous history in Canada<br>Retrieved from https://www.rcaanc-cirnac.gc.ca/eng/1100100013778/1607903934135",
         "",
         "",
         "",
@@ -365,7 +365,7 @@ const presentationData = [
         ""
       ],
       [
-        "Government of Canada. (2025-09-29). The Residential School System National Historic Event\nRetrieved from https://parks.canada.ca/culture/designation/evenement-event/sys-pensionnats-residential-school-sys\nINDIGENOUS CORPORATE TRAINING inc. (2022-12-05). 8 Key Issues for Indigenous Peoples in Canada\nRetrieved from: https://www.ictinc.ca/blog/8-key-issues-for-indigenous-peoples-in-canada\nGovernment of Canada. (2025-09-17). Delivering on Truth and Reconciliation Commission Calls to Action\nRetrieved from https://www.rcaanc-cirnac.gc.ca/eng/1524494530110/1557511412801",
+        "Government of Canada. (2025-09-29). The Residential School System National Historic Event<br>Retrieved from https://parks.canada.ca/culture/designation/evenement-event/sys-pensionnats-residential-school-sys<br>INDIGENOUS CORPORATE TRAINING inc. (2022-12-05). 8 Key Issues for Indigenous Peoples in Canada<br>Retrieved from: https://www.ictinc.ca/blog/8-key-issues-for-indigenous-peoples-in-canada<br>Government of Canada. (2025-09-17). Delivering on Truth and Reconciliation Commission Calls to Action<br>Retrieved from https://www.rcaanc-cirnac.gc.ca/eng/1524494530110/1557511412801",
         "",
         "",
         "",
@@ -374,7 +374,7 @@ const presentationData = [
         ""
       ],
       [
-        "Pawanka Fund. (2023). Indigenous Innovations Use of Indigenous Technologies\nRetrieved from https://pawankafund.org/blog-news/indigenous-innovations-use-of-indigenous-technologies/",
+        "Pawanka Fund. (2023). Indigenous Innovations Use of Indigenous Technologies<br>Retrieved from https://pawankafund.org/blog-news/indigenous-innovations-use-of-indigenous-technologies/",
         "",
         "",
         "",
@@ -484,7 +484,7 @@ function loadPart(sectionName, partArr) {
   const text = getTextOf(sectionPart);
 
   title.textContent = sectionName;
-  text.innerHTML = partArr[0].replace("\n", "<br>");
+  text.innerHTML = partArr[0];
 
   applyImages(partArr);
 
