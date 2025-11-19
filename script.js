@@ -86,7 +86,7 @@ const presentationData = [
     "parts": [
       [
         "Before the arrival of the Europeans in the Americas, and hence Canada, the Indigenous peoples had lived on this land for thousands of years. For sustenance, the nomads hunted, gathered and fished, whilst the sedentarists engaged in agriculture. They fought wars, inherited culture and deepened their beliefs.",
-        "",
+        "bigsnake.jpg",
         "",
         "",
         "",
@@ -95,7 +95,7 @@ const presentationData = [
       ],
       [
         "They lived in groups, communities, clans and nations. They lived in families. There are six main Indigenous geographical groups. They are the Woodland First Nations, the Iroquoian First Nations, the Plains First Nations, the Plateau First Nations, the Pacific Coast First Nations, the First Nations of the Mackenzie and the Yukon River Basins.",
-        "",
+        "bigsnake.jpg",
         "",
         "",
         "",
@@ -107,7 +107,7 @@ const presentationData = [
   {
     "section": [
       "What are some tools, technologies and crafts of the Indigenous peoples?",
-        "",
+        "snowgoggles.jpg",
         "",
         "",
         "",
@@ -126,7 +126,7 @@ const presentationData = [
       ],
       [
         "Ultimately, their innovations have left a vital impact on the progression of modern day technology, yet it is not even a bit appreciated.",
-        "",
+        "snowgoggles.jpg",
         "",
         "",
         "",
