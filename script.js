@@ -19,7 +19,7 @@ const presentationData = [
         "",
         "",
         "",
-        ""
+        "everychildmatters.jpeg"
     ],
     "parts": [
       [
@@ -29,7 +29,7 @@ const presentationData = [
         "",
         "",
         "",
-        ""
+        "everychildmatters.jpeg"
       ],
       [
         "Examples of reconciliation towards Indigenous peoples include, but are not limited to, protesting for, studying of, and supporting the Indigenous peoples and their cultures. These forms of reconciliation are not the only ones, nor are they alone sufficient, but it is still tremendously important and necessary to perform them, even if it is in a minor way. After all, if even a sole person sloths due to their perceived insignificance, all others shall sloth too due to their perceived insignificance.",
@@ -38,14 +38,14 @@ const presentationData = [
         "",
         "",
         "",
-        ""
+        "everychildmatters.jpeg"
       ]
     ]
   },
   {
     "section": [
       "Who are the Indigenous peoples of Canada?",
-        "",
+        "map.png",
         "",
         "",
         "",
@@ -55,7 +55,7 @@ const presentationData = [
     "parts": [
       [
         "In Canada’s history, there were three main populations of Indigenous peoples: Métis, Inuit and the First Nations.",
-        "",
+        "map.png",
         "",
         "",
         "",
@@ -64,7 +64,7 @@ const presentationData = [
       ],
       [
         "It is important to note that they all have different histories and cultures, and categorizing them as one people can be harmful.",
-        "",
+        "map.png",
         "",
         "",
         "",
@@ -76,7 +76,7 @@ const presentationData = [
   {
     "section": [
       "What is the history of the Indigenous peoples of Canada?",
-        "",
+        "bigsnake.jpg",
         "",
         "",
         "",
@@ -117,7 +117,7 @@ const presentationData = [
     "parts": [
       [
         "The Indigenous peoples of Canada have produced many technologies, be it practical, for ease of life or otherwise. An example of one such technology is the Inuit’s snow goggles made of bone antler, allowing them to help protect their eyes from the reflections of the sun on the snow.",
-        "",
+        "snowgoggles.jpg",
         "",
         "",
         "",
@@ -169,7 +169,7 @@ const presentationData = [
   {
     "section": [
       "What exactly are residential schools?",
-        "",
+        "thescream.jpg",
         "",
         "",
         "",
@@ -179,7 +179,7 @@ const presentationData = [
     "parts": [
       [
         "Residential schools were a culturicide that lasted from the 18th century to the ends of the 20th century (~1700–~1990). Demanded by the Church, the Canadian government at the time hosted these institutions under the guise of “civilizing” the “uncivilized”. In truth, it was merely an evangelist forcing of religion and culture.",
-        "",
+        "thescream.jpg",
         "",
         "",
         "",
@@ -188,7 +188,7 @@ const presentationData = [
       ],
       [
         "They forced Indigenous children to attend the schools, stripped them of their identity, and placed them in the schools to force them to discard their language, tradition, culture, religion, identity and self and replace it with their own. This forceful, wasteful, hateful, harmful, vile and treacherous acculturation has caused immense trauma, mental and physical, to be dealt to the children.",
-        "",
+        "thescream.jpg",
         "",
         "",
         "",
@@ -197,7 +197,7 @@ const presentationData = [
       ],
       [
         "Hiding the dead bodies and records as if it were not shameful, the combined death toll of the schools is not at all known.",
-        "",
+        "thescream.jpg",
         "",
         "",
         "",
@@ -222,7 +222,7 @@ const presentationData = [
         "",
         "",
         "",
-        "",
+        "everychildmatters.jpeg",
         "",
         ""
       ],
@@ -231,7 +231,7 @@ const presentationData = [
         "",
         "",
         "",
-        "",
+        "everychildmatters.jpeg",
         "",
         ""
       ]
@@ -334,7 +334,16 @@ const presentationData = [
     ],
     "parts": [
       [
-        "HTML & CSS designing of the site - Hossein with slight use of AI<br>JavaScript functionality of the site - Hossein<br>Source Searching - Alborz with slight emotional support from Hossein<br>Retrieving Informations - Hossein & Alborz<br>Retrieving Images - Hossein & Alborz<br>Writing - Hossein & Alborz<br>Improving and reformatting writing - Hossein<br>Meowing - Mr. Kitty Whiskers",
+        "HTML & CSS designing of the site - Hossein with slight use of AI<br>JavaScript functionality of the site - Hossein<br>Source Searching - Alborz<br>Source Verification - Alborz & Hossein<br>Retrieving Informations - Hossein & Alborz<br>Retrieving Images - Hossein<br>Writing - Hossein & Alborz<br>Improving and reformatting writing - Hossein<br>Meowing - Mr. Kitty Whiskers",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "We recognize that we are not a wholly reliable source on the topic of Indigenous history and culture.<br>We recognize the information here is not comprehensive.<br>We trust that you can do your own individual research.<br>This is solely for garnering attention.<br>May we reconcile and correct our wrongs.",
         "",
         "",
         "",
@@ -394,7 +403,26 @@ const presentationData = [
       "",
       ""
     ],
-    "parts": []
+    "parts": [
+      [
+        "Every Child Matters Vector Illustration. https://www.discovernelson.com/news/canada-day-2023/every-child-matters-vector-illustration/<br><br>Aboriginal and Treaty Rights Information System (ATRIS) Map https://geo.sac-isc.gc.ca/Collection_de_cartes-Map_room/index_en.html<br><br>Big Snake, Chief of the Blackfoot Indians, Recounting his War Exploits to Five Subordinate Chiefs. https://www.gallery.ca/collection/artwork/big-snake-chief-of-the-blackfoot-indians-recounting-his-war-exploits-to-five",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Snow goggles. https://www.metmuseum.org/art/collection/search/751542<br><br>The Scream. https://www.aci-iac.ca/art-books/kent-monkman/key-works/the-scream/",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+    ]
   }
 ];
 
