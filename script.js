@@ -425,6 +425,28 @@ const presentationData = [
         ""
       ],
     ]
+  },
+  {
+    "section": [
+      "Inspirations",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "parts": [
+      [
+        "William Monague. Tranquility [Painting]. https://www.madeincanadagifts.ca/products/tranquility-william-monague-canadian-first-nations-ojibway-artist-limited-edition<br><br>Kent Monkman. The King's Beavers [Painting]. https://www.mbam.qc.ca/en/works/61170/",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
   }
 ];
 
